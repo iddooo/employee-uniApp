@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "青合力",
+  "usingComponents": {
+    "banner": "/components/Banner",
+    "search-box": "/components/SearchBox",
+    "tabs": "/components/Tabs",
+    "job-card": "/components/JobCard"
+  }
+}

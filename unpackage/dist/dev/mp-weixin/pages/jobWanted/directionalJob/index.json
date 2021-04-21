@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "快找急聘",
+  "usingComponents": {
+    "job-card": "/components/JobCard"
+  }
+}

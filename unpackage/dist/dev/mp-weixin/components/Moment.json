@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "news": "/components/News",
+    "comment": "/components/Comment"
+  }
+}

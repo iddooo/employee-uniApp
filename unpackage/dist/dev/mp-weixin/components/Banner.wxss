@@ -1,0 +1,49 @@
+
+.banner{
+	padding:48rpx 36rpx 24rpx;
+	position: relative;
+}
+.swiper-container{
+	height: 306rpx;
+	-webkit-border-radius: 16rpx;
+	        border-radius: 16rpx;
+	overflow: hidden;
+	-webkit-transform: translateY(0);
+	        transform: translateY(0);
+}
+.swiper{
+	height: 100%;
+}
+.banner-img{
+	width: 100%;
+	height: 100%;
+}
+.dots{
+	position: absolute;
+	left: 50%;
+	bottom: 48rpx;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	z-index: 1;
+}
+.dot{
+	width:10rpx;
+	height:10rpx;
+	-webkit-border-radius: 5rpx;
+	        border-radius: 5rpx;
+	background: #fff;
+	opacity:0.42;
+	margin-right: 14rpx;
+}
+.dot:last-of-type{
+	margin-right: 0;
+}
+.dot.is-active{
+	opacity:1;
+	width: 24rpx;
+}
+
+

@@ -1,0 +1,1 @@
+<view class="layout layout-grey"><block wx:for="{{jobList}}" wx:for-item="job" wx:for-index="i" wx:key="i"><job-card vue-id="{{'0e4a8874-1-'+i}}" job="{{job}}" data-event-opts="{{[['^click',[['toJobDetail']]]]}}" bind:click="__e" bind:__l="__l"></job-card></block><view hidden="{{!(tips)}}" class="no-more">——— 没有更多内容了 ———</view></view>

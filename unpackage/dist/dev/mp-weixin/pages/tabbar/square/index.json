@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "广场",
+  "usingComponents": {
+    "tabs": "/components/Tabs",
+    "moment": "/components/Moment"
+  }
+}

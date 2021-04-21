@@ -1,0 +1,225 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabbar/index/index",
+			"style": {
+				"navigationBarTitleText": "青合力"
+			}
+		},
+		{
+			"path": "pages/tabbar/jobs/index",
+			"style": {
+				"navigationBarTitleText": "求职"
+			}
+		},
+		{
+			"path": "pages/tabbar/square/index",
+			"style": {
+				"navigationBarTitleText": "广场"
+			}
+		},
+		{
+			"path": "pages/tabbar/message/index",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/tabbar/mine/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+	],
+	"tabBar": {
+	    "color": "#CDCDCD",
+	    "selectedColor": "#2F2F2F",
+	    "borderStyle": "white",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/tabbar/index/index",
+	        "iconPath": "static/images/tabs/home.png",
+	        "selectedIconPath": "static/images/tabs/home-s.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/tabbar/jobs/index",
+	        "iconPath": "static/images/tabs/fund.png",
+	        "selectedIconPath": "static/images/tabs/fund-s.png",
+	        "text": "求职"
+	    },{
+	        "pagePath": "pages/tabbar/square/index",
+	        "iconPath": "static/images/tabs/voice-tabbar-s.png",
+	        "selectedIconPath": "static/images/tabs/voice-tabbar.png",
+	        "text": "广场"
+	    }, {
+	        "pagePath": "pages/tabbar/message/index",
+	        "iconPath": "static/images/tabs/shop.png",
+	        "selectedIconPath": "static/images/tabs/shop-s.png",
+	        "text": "消息"
+	    },{
+	        "pagePath": "pages/tabbar/mine/index",
+	        "iconPath": "static/images/tabs/my.png",
+	        "selectedIconPath": "static/images/tabs/my-s.png",
+	        "text": "我的"
+	    }
+		]
+	},
+	"subPackages":[
+		{
+			"root":"pages/jobWanted/",
+			"pages":[
+				{
+					"path": "city/index",
+					"style": {
+						"navigationBarTitleText": "选择城市"
+					}
+				},
+				{
+					"path": "city/searchCity",
+					"style": {
+						"navigationBarTitleText": "选择城市"
+					}
+				},
+				{
+					"path": "searchJob/index",
+					"style": {
+						"navigationBarTitleText": "搜索岗位"
+					}
+				},
+				{
+					"path": "directionalJob/index",
+					"style": {
+						"navigationBarTitleText": "快找急聘"
+					}
+				},
+				{
+					"path": "prefer/index",
+					"style": {
+						"navigationBarTitleText": "岗位意向设置"
+					}
+				}
+			]
+		},
+		{
+			"root":"pages/jobDetail/",
+			"pages":[
+				{
+					"path": "employment/index",
+					"style": {
+						"navigationBarTitleText": "岗位详情"
+					}
+				},
+				{
+					"path": "enterpriseInformation/index",
+					"style": {
+						"navigationBarTitleText": "企业主页"
+					}
+				},
+				{
+					"path": "partTimeJob/index",
+					"style": {
+						"navigationBarTitleText": "岗位详情"
+					}
+				},
+				{
+					"path": "participationState/index",
+					"style": {
+						"navigationBarTitleText": "报名详情"
+					}
+				},
+				{
+					"path": "platformGuarantee/index",
+					"style": {
+						"navigationBarTitleText": "平台保障"
+					}
+				}
+			]
+		},
+		{
+			"root":"pages/social/",
+			"pages":[
+				{
+					"path": "collections/index",
+					"style": {
+						"navigationBarTitleText": "我的收藏"
+					}
+				},
+				{
+					"path": "homepage/index",
+					"style": {
+						"navigationBarTitleText": "Ta的主页"
+					}
+				},
+				{
+					"path": "publish/index",
+					"style": {
+						"navigationBarTitleText": "发布动态"
+					}
+				},
+				{
+					"path": "resume/index",
+					"style": {
+						"navigationBarTitleText": "我的简历"
+					}
+				}
+			]
+		},
+		{
+			"root":"pages/about/",
+			"pages":[
+				{
+					"path": "aboutUs/index",
+					"style": {
+						"navigationBarTitleText": "关于青合力"
+					}
+				},
+				{
+					"path": "customerService/index",
+					"style": {
+						"navigationBarTitleText": "联系客服"
+					}
+				},
+				{
+					"path": "officialAccount/index",
+					"style": {
+						"navigationBarTitleText": "关注公众号"
+					}
+				},
+				{
+					"path": "privacyProtocol/index",
+					"style": {
+						"navigationBarTitleText": "用户隐私协议"
+					}
+				}
+			]
+		},
+		{
+			"root":"pages/chat/",
+			"pages":[
+				{
+					"path":"privateChat/index",
+					"style":{
+						"navigationBarTitleText":"会话消息"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {
+		"pages/tabbar/index/index": {
+			"network": "all",
+			"packages": ["pages/jobWanted"]
+		},
+		"pages/tabbar/jobs/index": {
+			"network": "all",
+			"packages": ["pages/jobDetail"]
+		}
+	},
+	
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

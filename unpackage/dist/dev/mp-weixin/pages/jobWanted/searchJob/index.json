@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索岗位",
+  "usingComponents": {
+    "search-box": "/components/SearchBox",
+    "job-card": "/components/JobCard"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="tabs flex-ct"><block wx:for="{{tabs}}" wx:for-item="item" wx:for-index="i" wx:key="i"><view data-event-opts="{{[['tap',[['change',['$0'],[[['tabs','',i]]]]]]]}}" class="{{['tab-item',[(item.value==value||tabs.length==0)?'is-active':'']]}}" bindtap="__e">{{''+item.label+''}}</view></block></view>

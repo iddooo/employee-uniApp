@@ -1,0 +1,114 @@
+{
+  "pages": [
+    "pages/tabbar/index/index",
+    "pages/tabbar/jobs/index",
+    "pages/tabbar/square/index",
+    "pages/tabbar/message/index",
+    "pages/tabbar/mine/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/jobWanted/",
+      "pages": [
+        "city/index",
+        "city/searchCity",
+        "searchJob/index",
+        "directionalJob/index",
+        "prefer/index"
+      ]
+    },
+    {
+      "root": "pages/jobDetail/",
+      "pages": [
+        "employment/index",
+        "enterpriseInformation/index",
+        "partTimeJob/index",
+        "participationState/index",
+        "platformGuarantee/index"
+      ]
+    },
+    {
+      "root": "pages/social/",
+      "pages": [
+        "collections/index",
+        "homepage/index",
+        "publish/index",
+        "resume/index"
+      ]
+    },
+    {
+      "root": "pages/about/",
+      "pages": [
+        "aboutUs/index",
+        "customerService/index",
+        "officialAccount/index",
+        "privacyProtocol/index"
+      ]
+    },
+    {
+      "root": "pages/chat/",
+      "pages": [
+        "privateChat/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#CDCDCD",
+    "selectedColor": "#2F2F2F",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/index/index",
+        "iconPath": "static/images/tabs/home.png",
+        "selectedIconPath": "static/images/tabs/home-s.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabbar/jobs/index",
+        "iconPath": "static/images/tabs/fund.png",
+        "selectedIconPath": "static/images/tabs/fund-s.png",
+        "text": "求职"
+      },
+      {
+        "pagePath": "pages/tabbar/square/index",
+        "iconPath": "static/images/tabs/voice-tabbar-s.png",
+        "selectedIconPath": "static/images/tabs/voice-tabbar.png",
+        "text": "广场"
+      },
+      {
+        "pagePath": "pages/tabbar/message/index",
+        "iconPath": "static/images/tabs/shop.png",
+        "selectedIconPath": "static/images/tabs/shop-s.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/tabbar/mine/index",
+        "iconPath": "static/images/tabs/my.png",
+        "selectedIconPath": "static/images/tabs/my-s.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/tabbar/index/index": {
+      "network": "all",
+      "packages": [
+        "pages/jobWanted"
+      ]
+    },
+    "pages/tabbar/jobs/index": {
+      "network": "all",
+      "packages": [
+        "pages/jobDetail"
+      ]
+    }
+  },
+  "usingComponents": {}
+}
