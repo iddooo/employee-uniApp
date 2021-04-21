@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Banner = function Banner() {__webpack_require__.e(/*! require.ensure | components/Banner */ "components/Banner").then((function () {return resolve(__webpack_require__(/*! ../../../components/Banner.vue */ 171));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var SearchBox = function SearchBox() {__webpack_require__.e(/*! require.ensure | components/SearchBox */ "components/SearchBox").then((function () {return resolve(__webpack_require__(/*! ../../../components/SearchBox.vue */ 178));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs */ "components/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../../components/Tabs.vue */ 185));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var JobCard = function JobCard() {__webpack_require__.e(/*! require.ensure | components/JobCard */ "components/JobCard").then((function () {return resolve(__webpack_require__(/*! ../../../components/JobCard.vue */ 192));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Banner = function Banner() {__webpack_require__.e(/*! require.ensure | components/Banner */ "components/Banner").then((function () {return resolve(__webpack_require__(/*! ../../../components/Banner.vue */ 174));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var SearchBox = function SearchBox() {__webpack_require__.e(/*! require.ensure | components/SearchBox */ "components/SearchBox").then((function () {return resolve(__webpack_require__(/*! ../../../components/SearchBox.vue */ 181));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs */ "components/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../../components/Tabs.vue */ 188));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var JobCard = function JobCard() {__webpack_require__.e(/*! require.ensure | components/JobCard */ "components/JobCard").then((function () {return resolve(__webpack_require__(/*! ../../../components/JobCard.vue */ 195));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -194,7 +194,7 @@ __webpack_require__.r(__webpack_exports__);
       type: 1,
       banners: [{ imgUrl: '/static/images/cover1.png' }],
       // 1-宅家赚钱 2-快找急聘 3-优先上岗 4-品牌直销 5-简单易做
-      entery: [
+      directional: [
       {
         label: 1,
         name: "宅家赚钱",
@@ -279,6 +279,7 @@ __webpack_require__.r(__webpack_exports__);
     var city = uni.getStorageSync('city');
 
     this.city = city ? city : location ? location : this.getLocationInfo();
+
   },
   methods: {
     toSearchJob: function toSearchJob() {
@@ -312,7 +313,8 @@ __webpack_require__.r(__webpack_exports__);
       // 获取定位城市
       var location = '南昌';
       uni.setStorageSync('location', location);
-      this.city = location;
+      uni.setStorageSync('city', location);
+      return location;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

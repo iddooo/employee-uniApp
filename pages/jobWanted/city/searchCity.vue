@@ -130,7 +130,7 @@
 
 		.cancel {
 			font-size: 26rpx;
-			color: #2F2F2F;
+			
 			line-height: 36rpx;
 			padding-left: 20rpx;
 			padding-right: 6rpx;
@@ -142,7 +142,7 @@
 		.item {
 			font-size: 28rpx;
 			font-weight: 500;
-			color: #2F2F2F;
+			
 			line-height: 80rpx;
 			padding-left: 40rpx;
 

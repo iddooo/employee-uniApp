@@ -2,7 +2,6 @@
 .search.data-v-33090a90 {
   width: 100%;
   background-color: #fff;
-  /* padding: 0 30rpx; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -17,7 +16,7 @@
   background: rgba(245, 246, 250, 1);
   -webkit-border-radius: 33rpx;
           border-radius: 33rpx;
-  color: #2F2F2F;
+  
   line-height: 36rpx;
   font-size: 26rpx;
   padding-left: 26rpx;
@@ -43,7 +42,7 @@
 }
 .cancel.data-v-33090a90{
 	font-size: 26rpx;
-	color: #2F2F2F;
+	
 	line-height: 36rpx;
 	padding-left: 20rpx;
 	padding-right: 6rpx;

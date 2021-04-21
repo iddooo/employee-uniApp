@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var SearchBox = function SearchBox() {__webpack_require__.e(/*! require.ensure | components/SearchBox */ "components/SearchBox").then((function () {return resolve(__webpack_require__(/*! ../../../components/SearchBox.vue */ 178));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var JobCard = function JobCard() {__webpack_require__.e(/*! require.ensure | components/JobCard */ "components/JobCard").then((function () {return resolve(__webpack_require__(/*! ../../../components/JobCard.vue */ 192));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var SearchBox = function SearchBox() {__webpack_require__.e(/*! require.ensure | components/SearchBox */ "components/SearchBox").then((function () {return resolve(__webpack_require__(/*! ../../../components/SearchBox.vue */ 181));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var JobCard = function JobCard() {__webpack_require__.e(/*! require.ensure | components/JobCard */ "components/JobCard").then((function () {return resolve(__webpack_require__(/*! ../../../components/JobCard.vue */ 195));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

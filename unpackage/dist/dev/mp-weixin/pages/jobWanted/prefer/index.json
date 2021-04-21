@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "岗位意向设置",
-  "usingComponents": {}
+  "usingComponents": {
+    "title": "/pages/jobWanted/prefer/Title"
+  }
 }

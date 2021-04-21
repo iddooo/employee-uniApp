@@ -45,7 +45,6 @@
 <style lang="scss">
 	.tabs {
 		padding: 0 36rpx;
-
 	}
 
 	.tab-item {

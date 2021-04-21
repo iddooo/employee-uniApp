@@ -1,1 +1,1 @@
-<view class="layout"></view>
+<view class="layout layout-grey"><job-head vue-id="24f32010-1" job="{{job}}" bind:__l="__l"></job-head></view>

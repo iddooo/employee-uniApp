@@ -1,0 +1,1 @@
+<view class="title flex-btm data-v-54595b95"><text class="data-v-54595b95">{{title}}</text><text class="sub-title data-v-54595b95">{{subtitle}}</text></view>

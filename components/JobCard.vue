@@ -182,7 +182,7 @@
 
 	.company {
 		font-size: 22rpx;
-		color: #2F2F2F;
+		
 		line-height: 32rpx;
 	}
 

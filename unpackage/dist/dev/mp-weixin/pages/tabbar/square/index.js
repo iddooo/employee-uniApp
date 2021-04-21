@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs */ "components/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../../components/Tabs.vue */ 185));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Moment = function Moment() {__webpack_require__.e(/*! require.ensure | components/Moment */ "components/Moment").then((function () {return resolve(__webpack_require__(/*! ../../../components/Moment.vue */ 199));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs */ "components/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../../components/Tabs.vue */ 188));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Moment = function Moment() {__webpack_require__.e(/*! require.ensure | components/Moment */ "components/Moment").then((function () {return resolve(__webpack_require__(/*! ../../../components/Moment.vue */ 202));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -167,7 +167,7 @@ __webpack_require__.r(__webpack_exports__);
 
       newsList: [{
         id: 1,
-        type: 1, //1个人
+        identity: 1, //1个人
         avater: '',
         nickName: '王羽佳',
         createTime: '2021-1-3',
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
       {
         id: 2,
-        type: 2, //企业
+        identity: 2, //企业
         avater: '',
         nickName: '王羽佳',
         createTime: '2021-1-3',

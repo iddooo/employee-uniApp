@@ -62,7 +62,7 @@
 	.name {
 		font-size: 26rpx;
 		font-weight: 500;
-		color: #2F2F2F;
+		
 		line-height: 36rpx;
 	}
 

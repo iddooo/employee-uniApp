@@ -71,7 +71,6 @@
 .user-head .info .name.data-v-8a22bc7a {
   font-size: 36rpx;
   font-weight: 500;
-  color: #2F2F2F;
   line-height: 50rpx;
   margin-right: 14rpx;
 }

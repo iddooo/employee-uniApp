@@ -40,7 +40,6 @@
 	.search {
 	  width: 100%;
 	  background-color: #fff;
-	  /* padding: 0 30rpx; */
 	  box-sizing: border-box;
 	  display: flex;
 	}
@@ -50,7 +49,7 @@
 	  height: 64rpx;
 	  background: rgba(245, 246, 250, 1);
 	  border-radius: 33rpx;
-	  color: #2F2F2F;
+	  
 	  line-height: 36rpx;
 	  font-size: 26rpx;
 	  padding-left: 26rpx;
@@ -74,7 +73,7 @@
 	}
 	.cancel{
 		font-size: 26rpx;
-		color: #2F2F2F;
+		
 		line-height: 36rpx;
 		padding-left: 20rpx;
 		padding-right: 6rpx;

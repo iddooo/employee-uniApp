@@ -1,7 +1,6 @@
 <template>
 	<view class="layout layout-grey">
-		<!-- identity 1个人 2企业 -->
-		<UserHead :userInfo="userInfo" :identity="identity" />
+		<UserHead :userInfo="userInfo" :type="type" />
 		<view class="tab-box">
 			<Tabs v-model="type" :tabs="tabs" />
 		</view>
@@ -10,8 +9,8 @@
 			<Moment :moment="moment" v-for="(moment,i) in newsList" :key="i"></Moment>
 		</view>
 		<!-- Ta的发布 -->
-		<view class="j-contatiner" v-if="identity==2 && type==0">
-			<JobCard :job="job" v-for="(job,i) in jobList" :key="i" @click="toJobDetail"/>
+		<view class="j-contatiner" v-if="identity==2 && type==2">
+			<JobCard :job="job" v-for="(job,i) in jobList" :key="i" @click="toJobDetail" />
 		</view>
 	</view>
 </template>
@@ -21,15 +20,13 @@
 	import Moment from '../../../components/Moment.vue'
 	import JobCard from '../../../components/JobCard.vue'
 	import UserHead from './UserHead.vue'
-	const tabsUser = [
-		{
-			label: "Ta的动态",
-			value: "1"
-		}
-	]
+	const tabsUser = [{
+		label: "Ta的动态",
+		value: "1"
+	}]
 	const tabsCompany = [{
 			label: "Ta的发布",
-			value: "0"
+			value: "2"
 		},
 		{
 			label: "Ta的动态",
@@ -45,12 +42,12 @@
 		},
 		data() {
 			return {
-				identity: 1,
+				identity: 1, //2就业 1兼职
 				userInfo: {
 					nickName: '王羽佳',
 					avater: '',
 					motto: '不要贬低黄昏，黄昏和清晨一样是奋斗的时间，如果你现在不努力，老来回望一生一定追悔莫及。',
-					tags:['文艺青年','爱吃','设计师','文艺青年']
+					tags: ['文艺青年', '爱吃', '设计师', '文艺青年']
 				},
 				type: 0,
 
@@ -147,8 +144,8 @@
 		onLoad(options) {
 			console.log(options)
 			let moment = JSON.parse(options.moment)
-			this.identity = moment.type
-			this.tabs = this.identity==1 ? tabsUser : tabsCompany
+			this.identity = moment.identity // 1 求职者 2招聘者
+			this.tabs = this.identity == 1 ? tabsUser : tabsCompany
 			this.type = this.tabs[0].value
 		},
 		methods: {
@@ -158,8 +155,8 @@
 			handlerAddComment(moment) {
 				console.log('handlerAddComment', moment)
 			},
-			toJobDetail(job){
-				console.log('查看岗位详情',job)
+			toJobDetail(job) {
+				console.log('查看岗位详情', job)
 			}
 		}
 	}
@@ -175,7 +172,8 @@
 	.container {
 		padding: 24rpx;
 	}
-	.j-contatiner{
+
+	.j-contatiner {
 		margin-top: 20rpx;
 	}
 </style>

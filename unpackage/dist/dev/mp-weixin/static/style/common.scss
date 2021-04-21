@@ -1,0 +1,98 @@
+.layout {
+	min-height: 100vh;
+	color: #1E1E1E;
+	background-color: #fff;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	color: #2F2F2F;
+}
+/* 标题 #333333 */
+/* 突出 #1E1E1E */
+/* 次要 #909090 */
+/* 主色 #00C777 */
+$mainColor: #00C777;
+$titleColor: #333333;
+$subColor: #1E1E1E;
+$greyColor: #909090;
+
+:export {
+	mainColor:$mainColor;
+	titleColor:$titleColor;
+	subColor:$subColor;
+	greyColor:$greyColor;
+}
+
+.layout-grey {
+	background-color: #F6F6F6;
+}
+
+@mixin flex($justify:center,$align:center){
+    display: flex;
+    align-items: $align;
+	justify-content: $justify;
+}
+//定位全屏
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+	left: 0;;
+	bottom: 0;
+}
+
+//定位上下左右居中
+@mixin center {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex-ct-bwt {
+	@include flex(space-between);
+}
+.flex-ct-end {
+	@include flex(flex-end);
+}
+
+.flex-ct-ard {
+	@include flex(space-around);
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-ct {
+	display: flex;
+	align-items: center;
+}
+.flex-ct-wrap{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flex-btm {
+	display: flex;
+	align-items: baseline;
+}
+
+.flex-ct-ct {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.elips {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.plc {
+	font-size: 28rpx;
+	color: #CDCDCD;
+	line-height: 40rpx;
+}
+

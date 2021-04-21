@@ -18,7 +18,7 @@
 		<!-- 定向工作 -->
 		<view class="entry flex-ct-bwt">
 			<view class="item"
-			v-for="item in entery"
+			v-for="item in directional"
 			:key='item.name'
 			@click="toDirectionalJob(item)">
 				<image :src="item.icon" mode=""></image>
@@ -56,7 +56,7 @@
 				type:1,
 				banners:[{imgUrl:'/static/images/cover1.png'}],
 				// 1-宅家赚钱 2-快找急聘 3-优先上岗 4-品牌直销 5-简单易做
-				entery:[
+				directional:[
 					{
 						label:1,
 						name:"宅家赚钱",
@@ -141,6 +141,7 @@
 			let city = uni.getStorageSync('city')
 			
 			this.city = city ? city : location ? location : this.getLocationInfo()
+			
 		},
 		methods: {
 			toSearchJob(){
@@ -174,7 +175,8 @@
 				// 获取定位城市
 				let location = '南昌'
 				uni.setStorageSync('location',location)
-				this.city = location
+				uni.setStorageSync('city',location)
+				return location
 			}
 		}
 	}
@@ -187,7 +189,7 @@
 		.site{
 			font-size: 34rpx;
 			font-weight: 500;
-			color: #2F2F2F;
+			
 			line-height: 52rpx;
 			width: 164rpx;
 			padding: 0 18rpx 0 4rpx;

@@ -1,7 +1,8 @@
 <template>
 	<view class="user-head">
 		<image class="bg" src="../../../static/images/bg.png" mode=""></image>
-		<image v-if="identity==1" class="cover1" src="../../../static/images/cover1.png" mode=""></image>
+		<!-- 1 Ta的动态  2Ta的发布-->
+		<image v-if="type==1" class="cover1" src="../../../static/images/cover1.png" mode=""></image>
 		<image v-else class="cover2" src="../../../static/images/cover2.png" mode=""></image>
 		<view class="user-avater">
 			<image :src="userInfo.avater" mode=""></image>
@@ -22,7 +23,7 @@
 
 <script>
 	export default {
-		props: ['userInfo', 'identity'],
+		props: ['userInfo', 'type'],
 		data() {
 			return {
 				colors: ['#00C777', '#F7B500', '#37A9FF', '#9173FF', '#FF8A3C'],
@@ -83,7 +84,7 @@
 			.name {
 				font-size: 36rpx;
 				font-weight: 500;
-				color: #2F2F2F;
+				
 				line-height: 50rpx;
 				margin-right: 14rpx;
 			}

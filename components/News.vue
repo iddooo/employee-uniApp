@@ -152,7 +152,7 @@
 	.name {
 		font-size: 28rpx;
 		font-weight: 500;
-		color: #2F2F2F;
+		
 		line-height: 40rpx;
 	}
 
@@ -166,7 +166,7 @@
 	.site {
 		font-size: 26rpx;
 		font-weight: 500;
-		color: #2F2F2F;
+		
 		line-height: 36rpx;
 	}
 
@@ -182,7 +182,7 @@
 	.content-box{
 		position: relative;
 		font-size: 28rpx;
-		color: #2F2F2F;
+		
 		line-height: 40rpx;
 	}
 	.content {

@@ -44,7 +44,6 @@
   height: 176rpx;
   font-size: 32rpx;
   font-weight: 500;
-  color: #2F2F2F;
   line-height: 44rpx;
   margin: 0 auto 40rpx;
 }

@@ -35,7 +35,7 @@
 				],
 				newsList: [{
 					id:1,
-					type:1, //1个人
+					identity:1, //1个人
 					avater: '',
 					nickName: '王羽佳',
 					createTime: '2021-1-3',
@@ -56,7 +56,7 @@
 					]
 				},{
 					id:2,
-					type:2,//企业
+					identity:2,//企业
 					avater: '',
 					nickName: '王羽佳',
 					createTime: '2021-1-3',

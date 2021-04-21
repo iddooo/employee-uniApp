@@ -2,13 +2,13 @@
 	<view class="select-city">
 		<view class="index-bg-view">
 			<view class="index">
-				<!-- <view class="index-item" @click="scrollTo('#')">#</view> -->
+				<!-- <view class="index-item" @click="scrollTo('1')">1</view> -->
 				<view class="index-item" v-for="(letter,i) in rightArr" :key="i" @click="scrollTo(letter)">{{ letter }}</view>
 			</view>
 		</view>
 		<scroll-view class="s-view" :style="{height: boxHeight + 'px'}" :scroll-into-view="scrollIntoId" @scroll="scrollChange" :scroll-y="true" :scroll-with-animation="isAnimation">
 			<view class="content">
-				<view class="section" id="#">
+				<view class="section" id="1">
 					<view class="city-title">定位城市</view>
 					<view class="city-list">
 						<view @click="onSelect({name:value})" class="city-item">
@@ -44,8 +44,9 @@
 				citys: Citys,
 				current: this.value,
 				isAnimation: true,
-				scrollIntoId:'#',
+				scrollIntoId:'1',
 				boxHeight:0,
+				rightArr:[]
 			};
 		},
 		mounted() {
@@ -53,7 +54,7 @@
 		},
 		created() {
 			this.rightArr = this.resetRight(this.citys)
-			// console.log(this.rightArr);
+			console.log(this.rightArr);
 		},
 		beforeDestroy() {
 		},
@@ -73,7 +74,7 @@
 			scrollTo(letter) {
 				console.log(letter);
 				this.isAnimation = true;
-				this.scrollIntoId = letter === '#' ? 'current' : letter;
+				this.scrollIntoId = letter === '1' ? 'current' : letter;
 			},
 			onSelect(city) {
 				console.log(city);
@@ -134,7 +135,7 @@
 			.letter {
 				font-size: 34rpx;
 				font-weight: 500;
-				color: #2F2F2F;
+				
 				line-height: 48rpx;
 				margin-bottom: 24rpx;
 			}
@@ -152,7 +153,7 @@
 					line-height: 66rpx;
 					text-align: center;
 					font-size: 24rpx;
-					color: #2F2F2F;
+					
 					box-sizing: border-box;
 					&.active {
 						border: 1px solid #00C777;

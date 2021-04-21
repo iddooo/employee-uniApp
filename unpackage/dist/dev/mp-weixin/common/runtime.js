@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/Banner":1,"components/JobCard":1,"components/SearchBox":1,"components/Tabs":1,"components/Moment":1,"pages/jobWanted/city/CitySelector":1,"pages/social/homepage/UserHead":1,"components/Comment":1,"components/News":1};
+/******/ 		var cssChunks = {"components/Banner":1,"components/JobCard":1,"components/SearchBox":1,"components/Tabs":1,"components/Moment":1,"pages/jobWanted/city/CitySelector":1,"pages/jobWanted/prefer/Title":1,"pages/jobDetail/partTimeJob/JobHead":1,"pages/social/homepage/UserHead":1,"components/Comment":1,"components/News":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/Banner":"components/Banner","components/JobCard":"components/JobCard","components/SearchBox":"components/SearchBox","components/Tabs":"components/Tabs","components/Moment":"components/Moment","pages/jobWanted/city/CitySelector":"pages/jobWanted/city/CitySelector","pages/social/homepage/UserHead":"pages/social/homepage/UserHead","components/Comment":"components/Comment","components/News":"components/News"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/Banner":"components/Banner","components/JobCard":"components/JobCard","components/SearchBox":"components/SearchBox","components/Tabs":"components/Tabs","components/Moment":"components/Moment","pages/jobWanted/city/CitySelector":"pages/jobWanted/city/CitySelector","pages/jobWanted/prefer/Title":"pages/jobWanted/prefer/Title","pages/jobDetail/partTimeJob/JobHead":"pages/jobDetail/partTimeJob/JobHead","pages/social/homepage/UserHead":"pages/social/homepage/UserHead","components/Comment":"components/Comment","components/News":"components/News"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
