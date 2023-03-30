@@ -1,5 +1,6 @@
 <template>
 	<view class="layout">
+		关注公众号
 	</view>
 </template>
 

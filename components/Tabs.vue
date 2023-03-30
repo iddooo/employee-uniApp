@@ -61,16 +61,13 @@
 
 	.tab-item.is-active {
 		padding: 0;
-		font-size: 40rpx;
 		font-weight: 600;
-		color: #333333;
-		line-height: 56rpx;
+		@include shc(40rpx,56rpx,#333)
 	}
 
 	.tab-item.is-active::after {
 		content: '';
-		width: 56rpx;
-		height: 56rpx;
+		@include wh(56rpx,56rpx)
 		background: rgba(0, 199, 119, 0.3);
 		position: absolute;
 		top: 2rpx;

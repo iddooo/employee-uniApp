@@ -5,7 +5,6 @@
 		</view>
 		<view class="container">
 			<Moment :moment="moment" v-for="(moment,i) in newsList" :key="i"
-			 @tapMoment="toMomentInfo"
 			 @tapTopic="toJobDetail" 
 			 @tapAvater="toHomePage"
 			 @tapLikes="handlerLike"
@@ -13,16 +12,23 @@
 		</view>
 		
 		<image class="pbls" src="../../../static/images/add.png" mode="" @click="toPublish"></image>
+		
+		<InputBox v-model="commentContent" :commit="commit"  @send="send" @cancel="commit=false"/>
+		
 	</view>
 </template>
 
 <script>
 	import Tabs from '../../../components/Tabs.vue'
 	import Moment from '../../../components/Moment.vue'
-
+	import InputBox from '../../../components/InputBox.vue'
+	
 	export default {
 		data() {
 			return {
+				commit:false,
+				commentContent:"",
+				
 				type: 0,
 				tabs: [{
 						label: "青合社区",
@@ -93,15 +99,13 @@
 		},
 		components: {
 			Tabs,
-			Moment
+			Moment,
+			InputBox
 		},
 		onLoad() {
 
 		},
 		methods: {
-			toMomentInfo(moment){
-				console.log('toMomentInfo',moment)
-			},
 			toJobDetail(moment){
 				console.log('toJobDetail',moment)
 			},
@@ -116,6 +120,12 @@
 			},
 			handlerAddComment(moment){
 				console.log('handlerAddComment',moment)
+				this.commit = true
+				this.commentContent = ''
+			},
+			send(val){
+				console.log(val);
+				this.commit = false
 			},
 			toPublish(){
 				uni.navigateTo({

@@ -1,4 +1,11 @@
 {
   "navigationBarTitleText": "岗位详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "job-head": "/pages/jobDetail/employment/JobHead",
+    "site-map": "/pages/jobDetail/employment/SiteMap",
+    "details": "/pages/jobDetail/employment/Details",
+    "publisher": "/pages/jobDetail/employment/Publisher",
+    "job-card": "/components/JobCard",
+    "communicate": "/pages/jobDetail/employment/Communicate"
+  }
 }

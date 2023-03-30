@@ -9,8 +9,9 @@
 "use strict";
 /* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ 4);var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 5));
+var _goeasyIm = _interopRequireDefault(__webpack_require__(/*! ./lib/goeasy-im-1.5.1 */ 11));
 
-__webpack_require__(/*! static/style/common.scss */ 11);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+__webpack_require__(/*! static/style/common.scss */ 16);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
 _vue.default.config.productionTip = false;
 
@@ -20,6 +21,27 @@ var app = new _vue.default(_objectSpread({},
 _App.default));
 
 createApp(app).$mount();
+
+_vue.default.prototype.im = _goeasyIm.default.getInstance({
+  host: 'hangzhou.goeasy.io',
+  appkey: 'BC-f92381b84db94a22961ca68919f48b20',
+  // true表示支持通知栏提醒，false则表示不需要通知栏提醒
+  allowNotification: true //仅有效于app，小程序和H5将会被自动忽略
+});
+_vue.default.prototype.GoEasyIM = _goeasyIm.default;
+
+_vue.default.prototype.formatDate = function (t) {
+  t = t || Date.now();
+  var time = new Date(t);
+  var str = time.getMonth() < 9 ? '0' + (time.getMonth() + 1) : time.getMonth() + 1;
+  str += '-';
+  str += time.getDate() < 10 ? '0' + time.getDate() : time.getDate();
+  str += ' ';
+  str += time.getHours();
+  str += ':';
+  str += time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes();
+  return str;
+};
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createApp"]))
 
 /***/ }),

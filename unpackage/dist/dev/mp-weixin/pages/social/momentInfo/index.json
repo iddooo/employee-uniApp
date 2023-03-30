@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "青合力",
+  "usingComponents": {
+    "news": "/components/News",
+    "comment": "/components/Comment"
+  }
+}

@@ -5,7 +5,7 @@
 				<view v-if="keyword" class="cancel" @click="cancel">取消</view>
 			</SearchBox>
 		</view>
-		<JobCard v-for="(job,i) in jobList" :key="i" :job="job" @click="toJobDetail" />
+		<JobCard v-for="(job,i) in jobList" :key="i" :job="job"/>
 		<view class="no-more" v-show="tips">
 			——— 没有更多内容了 ———
 		</view>
@@ -87,9 +87,6 @@
 					keyword: this.keyword
 				}
 				// 调用接口
-			},
-			toJobDetail(job) {
-
 			}
 		},
 		onReachBottom() {
@@ -118,15 +115,6 @@
 			padding-left: 20rpx;
 			padding-right: 6rpx;
 		}
-	}
-
-	.no-more {
-		text-align: center;
-		font-size: 20rpx;
-		color: #CDCDCD;
-		line-height: 28rpx;
-		padding-bottom: 12rpx;
-		background-color: #F6F6F6;
 	}
 	.no-res{
 		font-size: 28rpx;

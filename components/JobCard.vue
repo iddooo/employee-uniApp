@@ -87,9 +87,26 @@
 		},
 		methods:{
 			toJobDetail(){
-				this.$emit('click',this.job)
+				console.log('all跳转岗位详情',this.job.type);
+				// 1兼职 2就业
+				if(this.job.type==1){
+					uni.navigateTo({
+						url:'/pages/jobDetail/partTimeJob/index',
+						success:(res)=>{
+							
+						},
+						fail:(err)=>{
+							console.log(err);
+						}
+					})
+				}else{
+					uni.navigateTo({
+						url:'/pages/jobDetail/employment/index'
+					})
+				}
 			}
-		}
+		},
+		
 	}
 </script>
 
@@ -104,22 +121,17 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 84rpx;
-		height: 36rpx;
+		@include wh(84rpx,36rpx)
+		@include shc(22rpx,36rpx,#FFFFFF)
 		background: #00C777;
 		border-radius: 0px 0px 0px 200rpx;
-		font-size: 22rpx;
 		font-weight: 500;
-		color: #FFFFFF;
-		line-height: 36rpx;
 		text-align: center;
 	}
 
 	.title {
-		font-size: 34rpx;
 		font-weight: 600;
-		color: #333333;
-		line-height: 48rpx;
+		@include shc(34rpx,48rpx,#333333)
 	}
 
 	.ftc-green {

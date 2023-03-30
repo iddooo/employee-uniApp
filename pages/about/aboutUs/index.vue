@@ -1,5 +1,6 @@
 <template>
 	<view class="layout">
+		关于青合力
 	</view>
 </template>
 

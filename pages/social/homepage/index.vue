@@ -10,7 +10,7 @@
 		</view>
 		<!-- Ta的发布 -->
 		<view class="j-contatiner" v-if="identity==2 && type==2">
-			<JobCard :job="job" v-for="(job,i) in jobList" :key="i" @click="toJobDetail" />
+			<JobCard :job="job" v-for="(job,i) in jobList" :key="i"/>
 		</view>
 	</view>
 </template>
@@ -19,7 +19,8 @@
 	import Tabs from '../../../components/Tabs.vue'
 	import Moment from '../../../components/Moment.vue'
 	import JobCard from '../../../components/JobCard.vue'
-	import UserHead from './UserHead.vue'
+	import UserHead from '../../../components/UserHead.vue'
+	
 	const tabsUser = [{
 		label: "Ta的动态",
 		value: "1"
@@ -154,9 +155,6 @@
 			},
 			handlerAddComment(moment) {
 				console.log('handlerAddComment', moment)
-			},
-			toJobDetail(job) {
-				console.log('查看岗位详情', job)
 			}
 		}
 	}
@@ -164,6 +162,7 @@
 
 <style lang="scss" scoped>
 	.tab-box {
+		border-top: 2rpx solid #E2E2E2;
 		padding-top: 46rpx;
 		padding-bottom: 42rpx;
 		background-color: #FFFFFF;

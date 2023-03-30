@@ -23,7 +23,7 @@
         "employment/index",
         "enterpriseInformation/index",
         "partTimeJob/index",
-        "participationState/index",
+        "applyState/index",
         "platformGuarantee/index"
       ]
     },
@@ -33,7 +33,10 @@
         "collections/index",
         "homepage/index",
         "publish/index",
-        "resume/index"
+        "resume/index",
+        "momentInfo/index",
+        "profile/index",
+        "applies/index"
       ]
     },
     {
@@ -110,5 +113,6 @@
       ]
     }
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

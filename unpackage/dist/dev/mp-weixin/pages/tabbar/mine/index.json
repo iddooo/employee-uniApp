@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "我的",
-  "usingComponents": {}
+  "usingComponents": {
+    "user-head": "/components/UserHead",
+    "tabs": "/components/Tabs"
+  }
 }

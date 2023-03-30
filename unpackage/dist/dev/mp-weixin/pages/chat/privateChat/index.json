@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "会话消息",
-  "usingComponents": {}
+  "usingComponents": {
+    "go-easy-audio-player": "/components/GoEasyAudioPlayer/GoEasyAudioPlayer"
+  }
 }

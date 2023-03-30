@@ -122,7 +122,7 @@
 					}
 				},
 				{
-					"path": "participationState/index",
+					"path": "applyState/index",
 					"style": {
 						"navigationBarTitleText": "报名详情"
 					}
@@ -161,7 +161,26 @@
 					"style": {
 						"navigationBarTitleText": "我的简历"
 					}
+				},
+				{
+					"path": "momentInfo/index",
+					"style": {
+						"navigationBarTitleText": "青合力"
+					}
+				},
+				{
+					"path": "profile/index",
+					"style": {
+						"navigationBarTitleText": "个人简介"
+					}
+				},
+				{
+					"path": "applies/index",
+					"style": {
+						"navigationBarTitleText": "我的报名"
+					}
 				}
+				
 			]
 		},
 		{

@@ -1,5 +1,6 @@
 <template>
 	<view class="layout">
+		联系客服
 	</view>
 </template>
 

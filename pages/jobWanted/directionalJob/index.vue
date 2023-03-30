@@ -1,6 +1,6 @@
 <template>
 	<view class="layout layout-grey">
-		<JobCard v-for="(job,i) in jobList" :key="i" :job="job" @click="toJobDetail" />
+		<JobCard v-for="(job,i) in jobList" :key="i" :job="job"/>
 		<view class="no-more" v-show="tips">
 			——— 没有更多内容了 ———
 		</view>
@@ -77,9 +77,6 @@
 					label: this.label
 				}
 				// 调用接口
-			},
-			toJobDetail(job) {
-			
 			}
 		},
 		onReachBottom() {

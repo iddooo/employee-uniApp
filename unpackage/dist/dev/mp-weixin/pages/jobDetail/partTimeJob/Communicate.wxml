@@ -1,0 +1,1 @@
+<view class="communicate flex-ct-bwt data-v-27bc38f7"><view data-event-opts="{{[['tap',[['goChat',['$event']]]]]}}" class="btn1 flex-ct-ct data-v-27bc38f7" bindtap="__e">在线沟通</view><view data-event-opts="{{[['tap',[['participate',['$event']]]]]}}" class="btn2 flex-ct-ct data-v-27bc38f7" bindtap="__e">立即报名</view></view>

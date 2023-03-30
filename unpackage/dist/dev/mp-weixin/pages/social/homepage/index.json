@@ -3,7 +3,7 @@
   "usingComponents": {
     "tabs": "/components/Tabs",
     "moment": "/components/Moment",
-    "user-head": "/pages/social/homepage/UserHead",
+    "user-head": "/components/UserHead",
     "job-card": "/components/JobCard"
   }
 }

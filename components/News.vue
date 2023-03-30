@@ -21,14 +21,14 @@
 			</view>
 		</view>
 		<!-- 内容 -->
-		<view class="content-box mb24">
+		<view class="content-box mb24" @click.stop="fold">
 			<view :class="['content',{'unfold':!isFold}]">
 				{{news.content}}
 			</view>
 			<!-- 超过2行显示 -->
-			<view class="fold" @click="fold" v-show="exceed">
+			<view class="fold" v-show="exceed">
 				<!-- 折叠时 -->
-				<view v-if="isFold" >
+				<view v-if="isFold">
 					<text>...</text>
 					<image src="../static/images/fold.png" mode=""></image>
 				</view>
@@ -85,48 +85,51 @@
 		data() {
 			return {
 				isFold: true,
-				exceed:false
-
+				exceed: false,
 			}
 		},
-		methods:{
-			fold(){
+		methods: {
+			fold() {
+				if(!this.exceed) return
 				this.isFold = !this.isFold
 			},
-			handlerLike(){
+			handlerLike() {
 				console.log('喜欢')
 				this.news.isLike = true
-				this.$emit('tapLikes',this.news)
+				this.$emit('tapLikes', this.news)
 			},
-			handlerAddComment(){
-				console.log('评论')
-				this.$emit('tapComments',this.news)
+			handlerAddComment() {
+				console.log('all 评论')
+				this.$emit('tapComments', this.news)
 			},
-			toJobDetail(){
+			send(){
+				
+			},
+			toJobDetail() {
 				// 跳转岗位详情
-				this.$emit('tapTopic',this.news)
+				this.$emit('tapTopic', this.news)
 			},
-			toHomePage(){
-				this.$emit('tapAvater',this.news)
+			toHomePage() {
+				this.$emit('tapAvater', this.news)
 			}
 		},
 		mounted() {
 			let lineHeight = 40
 			uni.getSystemInfo({
-			    success: (res) => {
-			        // console.log(res);//设备像素比 
+				success: (res) => {
+					// console.log(res);//设备像素比 
 					let screenWidth = res.screenWidth // 414
-					let lh = screenWidth/750*40
+					let lh = screenWidth / 750 * 40
 					const query = uni.createSelectorQuery().in(this);
 					query.select('.content').boundingClientRect(data => {
 						// console.log(lh, data.height)
 						let contentHeight = data.height
-						this.exceed = contentHeight/lh >1 ? true : false
+						this.exceed = contentHeight / lh > 1 ? true : false
 					}).exec();
-			    }
+				}
 			});
 		},
-		
+
 	}
 </script>
 
@@ -142,17 +145,17 @@
 		background: #E2E2E2;
 		border-radius: 50%;
 		margin-right: 16rpx;
-	}
 
-	.head-pic image {
-		width: 100%;
-		height: 100%;
+		image {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	.name {
 		font-size: 28rpx;
 		font-weight: 500;
-		
+
 		line-height: 40rpx;
 	}
 
@@ -166,7 +169,7 @@
 	.site {
 		font-size: 26rpx;
 		font-weight: 500;
-		
+
 		line-height: 36rpx;
 	}
 
@@ -179,35 +182,39 @@
 	.mb24 {
 		margin-bottom: 24rpx;
 	}
-	.content-box{
+
+	.content-box {
 		position: relative;
 		font-size: 28rpx;
-		
+
 		line-height: 40rpx;
 	}
+
 	.content {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
+		@include elips(2)
 	}
-	.content.unfold{
+
+	.content.unfold {
 		overflow: auto;
 		display: block;
 	}
-	.fold{
+
+	.fold {
 		position: absolute;
 		right: 2rpx;
 		bottom: 0;
 		background-color: #fff;
+		// background: linear-gradient(left, rgba(255,255,255,.5), rgba(255,255,255,1));
 	}
-	.fold image{
+
+	.fold image {
 		margin-left: 44rpx;
+		margin-right: 22rpx;
 		width: 22rpx;
 		height: 22rpx;
 	}
-	.topic{
+
+	.topic {
 		padding: 10rpx 20rpx 10rpx 66rpx;
 		font-size: 26rpx;
 		color: #0091FF;
@@ -217,40 +224,47 @@
 		position: relative;
 		display: inline-block;
 	}
-	.topic image{
+
+	.topic image {
 		width: 30rpx;
 		height: 30rpx;
 		position: absolute;
 		left: 20rpx;
 		top: 16rpx;
 	}
-	.imgs{
+
+	.imgs {
 		padding-top: 16rpx;
 		padding-bottom: 20rpx;
 	}
-	.imgs image{
+
+	.imgs image {
 		width: 206rpx;
 		height: 206rpx;
 		background: #E2E2E2;
 		border-radius: 10rpx;
 		margin-right: 12rpx;
 	}
-	.interact{
+
+	.interact {
 		padding-top: 40rpx;
 		padding-bottom: 10rpx;
 	}
-	.r-item{
+
+	.r-item {
 		font-size: 26rpx;
 		color: #909090;
 		line-height: 36rpx;
 		margin-left: 50rpx;
 	}
-	.r-item image{
+
+	.r-item image {
 		width: 40rpx;
 		height: 36rpx;
 		margin-right: 10rpx;
 	}
-	.r-item text{
+
+	.r-item text {
 		min-width: 64rpx;
 	}
 </style>

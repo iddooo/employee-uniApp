@@ -99,10 +99,12 @@
 			}
 		},
 		onLoad() {
+			console.log('onload',this.country);
+			this.country = []
 			let city = uni.getStorageSync('city')
 			regionList.filter(r => {
 				if (r.indexOf(city) > -1) {
-					this.country = regionObj[r]
+					this.country = JSON.parse(JSON.stringify((regionObj[r])))
 					return
 				}
 			})

@@ -1,5 +1,6 @@
 <template>
 	<view class="layout">
+		我的简历
 	</view>
 </template>
 

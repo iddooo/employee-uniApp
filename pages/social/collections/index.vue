@@ -1,5 +1,6 @@
 <template>
 	<view class="layout">
+		ฮาตฤสีฒุ
 	</view>
 </template>
 

@@ -1,44 +1,44 @@
 <template>
-	<view class="job-card">
+	<view class="data-card">
+		<view class="flex-ct-end collection" @click="tapStar">
+			<image v-if="data.isCollected" src="../../../static/images/star-color.png" mode=""></image>
+			<image v-else src="../../../static/images/star.png" mode=""></image>
+		</view>
 		<view class="flex-ct-bwt">
 			<view class="title">
-				{{job.title}}
+				{{data.title}}
 			</view>
 			<view class="flex-btm ftc-green">
 				<view class="symbol">
 					¥
 				</view>
 				<view class="price">
-					{{job.price}}
+					{{data.price}}
 				</view>
 				<view class="unit">
-					元/{{job.type==1 ? job.unit : '月'}}
+					元/{{data.type==1 ? data.unit : '月'}}
 				</view>
 			</view>
 		</view>
 		<view class="flex-ct box">
 			<!-- 兼职标签：岗位类型 结算周期(日结/完工结/周结/月结) 性别要求 工作时间(长招显示/短招不显示)-->
 			<view class="lables flex-ct">
-				<view class="label">{{job.category}}</view>
-				<view class="label">{{job.settlementPeriod}}</view>
-				<view class="label">{{job.sex}}</view>
-				<view class="label">{{job.recruitmentCycle==='长招' ? '长招' : ''}}</view>
+				<view class="label">{{data.category}}</view>
+				<view class="label">{{data.settlementPeriod}}</view>
+				<view class="label">{{data.sex}}</view>
+				<view class="label">{{data.recruitmentCycle==='长招' ? '长招' : ''}}</view>
 			</view>
 		</view>
-		<view class="flex-ct-bwt">
+		<view class="flex-ct-bwt" @click="toPlatformGuarantee">
 			<view class="flex-ct">
 				<!-- 是否平台担保 -->
-				<image v-if="job.isGuaranteed" src="/static/images/danbao.png" mode="" class="grted"></image>
-				<!-- 是否认证 -->
-				<image v-if="job.isAuthenticated" src="/static/images/shield.png" mode="" class="shield"></image>
-				<!-- 是否直聘 -->
-				<image v-if="job.isDirect" src="/static/images/direct.png" mode="" class="direct"></image>
+				<image v-if="data.isGuaranteed" src="/static/images/danbao.png" mode="" class="grted"></image>
 				<view class="company">
-					{{job.companyName}}
+					放心投递  兼职无忧
 				</view>
 			</view>
-			<view class="company site">
-				{{job.site}}
+			<view class="arrow">
+				<image src="../../../static/images/right@2x.png" mode=""></image>
 			</view>
 		</view>
 	</view>
@@ -47,7 +47,7 @@
 <script>
 	export default {
 		props: {
-			job: {
+			data: {
 				type: Object,
 				default: () => {
 					return {
@@ -75,18 +75,24 @@
 			}
 		},
 		methods:{
+			tapStar(){
+				this.$emit('tapStar',this.data)
+			},
+			toPlatformGuarantee(){
+				this.$emit('link',this.data)
+			}
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
-	.job-card {
-		padding: 42rpx 36rpx 30rpx;
-		margin-bottom: 20rpx;
+	.data-card {
+		padding: 26rpx 40rpx 26rpx 48rpx;
+		margin-bottom: 24rpx;
 		background-color: #fff;
 		position: relative;
 	}
-	.job-type{
+	.data-type{
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -102,53 +108,45 @@
 	}
 
 	.title {
-		font-size: 34rpx;
 		font-weight: 600;
-		color: #333333;
-		line-height: 48rpx;
+		@include shc(46rpx,64rpx,#333)
 	}
 
 	.ftc-green {
-		color: #00C777;
-		font-family: DINAlternate-Bold, DINAlternate;
+		font-weight: bold;
 	}
 
 	.symbol {
-		font-size: 22rpx;
-		font-weight: bold;
+		@include shc(26rpx,30rpx,#00C777,'DINAlternate-Bold, DINAlternate')
 	}
 
 	.price {
-		font-size: 34rpx;
-		margin: 0 2rpx 0 4rpx;
-		font-weight: bold;
+		margin-left: 4rpx;
+		@include shc(42rpx,50rpx,#00C777,'DINAlternate-Bold, DINAlternate')
 	}
 
 	.unit {
-		font-size: 16rpx;
+		@include shc(24rpx,34rpx,#00C777,'DINAlternate-Bold, DINAlternate')
 	}
 
 	.box {
 		padding-top: 20rpx;
-		padding-bottom: 30rpx;
+		padding-bottom: 32rpx;
 	}
 
 	.grted {
-		width: 110rpx;
-		height: 40rpx;
-		margin-right: 28rpx;
+		@include wh(110rpx,40rpx);
+		margin-right: 18rpx;
 	}
 
 	.label {
-		width: 110rpx;
-		height: 40rpx;
+		@include wh(110rpx,48rpx);
 		background: rgba(244, 244, 244, 0.7);
 		margin-right: 10rpx;
 		text-align: center;
-		line-height: 40rpx;
+		line-height: 48rpx;
 		font-size: 22rpx;
 		font-weight: 500;
-		color: #1E1E1E;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -160,19 +158,25 @@
 		margin-right: 6rpx;
 	}
 
-	.direct {
-		width: 32rpx;
-		height: 30rpx;
-		margin-right: 6rpx;
-	}
-
-	.company {
+	.company{
 		font-size: 22rpx;
-		
 		line-height: 32rpx;
 	}
-
-	.site {
-		color: #909090;
+	.arrow{
+		width: 12rpx;
+		height: 24rpx;
+		margin-right: 20rpx;
+		image{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.collection{
+		padding-right: 6rpx;
+		image{
+			width: 34rpx;
+			height: 32rpx;
+		}
+		margin-bottom: 4rpx;
 	}
 </style>

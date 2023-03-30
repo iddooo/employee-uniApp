@@ -1,6 +1,11 @@
 {
   "navigationBarTitleText": "岗位详情",
   "usingComponents": {
-    "job-head": "/pages/jobDetail/partTimeJob/JobHead"
+    "job-head": "/pages/jobDetail/partTimeJob/JobHead",
+    "site-map": "/pages/jobDetail/partTimeJob/SiteMap",
+    "details": "/pages/jobDetail/partTimeJob/Details",
+    "publisher": "/pages/jobDetail/partTimeJob/Publisher",
+    "job-card": "/components/JobCard",
+    "communicate": "/pages/jobDetail/partTimeJob/Communicate"
   }
 }

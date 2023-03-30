@@ -14,9 +14,9 @@
 				</view>
 			</view>
 			<!-- 折叠 -->
-			<view class="fold flex-ct-ct" v-if="moment.tops.length>1">
-				<image @click="fold" v-if="isFold" src="/static/images/fold.png" mode="" />
-				<image @click="fold" v-else src="/static/images/unfold.png" mode="" />
+			<view class="fold flex-ct-ct" v-if="moment.tops.length>1" @click.stop="fold">
+				<image v-if="isFold" src="/static/images/fold.png" mode="" />
+				<image v-else src="/static/images/unfold.png" mode="" />
 			</view>
 		</News>
 	</view>
@@ -82,7 +82,10 @@
 				this.items = this.isFold ? 1 : this.moment.tops.length
 			},
 			tapMoment(){
-				this.$emit('tapMoment',this.moment)
+				console.log('all 跳转评论内容');
+				uni.navigateTo({
+					url:'/pages/social/momentInfo/index'
+				})
 			},
 			tapTopic(){
 				this.$emit('tapTopic',this.moment)
@@ -117,8 +120,7 @@
 		background: #F8F8F9;
 	}
 	.line{
-		width: 100%;
-		height: 20rpx;
+		@include wh(100%,20rpx)
 		background-color: #fff;
 	}
 	.fold{
@@ -128,7 +130,6 @@
 	}
 
 	.fold image {
-		width: 22rpx;
-		height: 22rpx;
+		@include wh(22rpx,22rpx)
 	}
 </style>
